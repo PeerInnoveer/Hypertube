@@ -101,12 +101,13 @@ nav {
     width: 100%;
     height: 60px;
     top: 0;
-    background-image: linear-gradient(80deg, orange, purple);
+    /* background-image: linear-gradient(80deg, orange, purple); */
+    background-color: white;
 }
 
 .logo {
     float: left;
-    color: white;
+    color: black;
     font-size: 30px;
     padding: 12px 12px;
 }
@@ -117,7 +118,7 @@ nav {
     top: 12.5px;
     left: 55px;
     font-size: 35px;
-    color: white;
+    color: black;
     font-family: 'Carter One', monospace;
 }
 
@@ -163,13 +164,15 @@ nav {
   /* Control the left side */
 .left {
     left: 0;
-    background-color: purple;
+    /* background-color: #bdbdbd; */
+    background-image: linear-gradient(red, purple);
 }
   
   /* Control the right side */
 .right {
     right: 0;
-    background-color: orange;
+    /* background-color: #95a4bf; */
+    background-image: linear-gradient(purple, red);
 }
   
 /* If you want the content centered horizontally and vertically */
@@ -185,6 +188,10 @@ nav {
 .centered img {
     width: 150px;
     border-radius: 50%;
+}
+
+h2, p {
+    color: white;
 }
 
 @media only screen and (max-width: 1000px) {
