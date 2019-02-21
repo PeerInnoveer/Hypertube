@@ -96,20 +96,25 @@ input, select {
 
 
 nav {
+    position: fixed;
+    z-index: 1;
     width: 100%;
     height: 60px;
-    background-image: linear-gradient(80deg, rgb(231, 150, 0), purple);
+    top: 0;
+    background-image: linear-gradient(80deg, orange, purple);
 }
 
 .logo {
+    float: left;
     color: white;
     font-size: 30px;
-    padding: 10px 12px;
+    padding: 12px 12px;
 }
 
 .brand_name {
     position: absolute;
-    top: 11px;
+    line-height: 35px;
+    top: 12.5px;
     left: 55px;
     font-size: 35px;
     color: white;
@@ -120,7 +125,68 @@ nav {
     background-image: linear-gradient(75deg, orange, purple);
  }
 
+.container {
+    width: 100%;
+    padding-top: 15px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 50px;
+    font-family: 'Carter One', monospace;
+}
+
+/* @media (min-width: 768px) {
+    .container {
+        color: red;
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        color: purple;
+        max-width: 720px;
+    }
+} */
+
 /* mobile styling */
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+  /* Control the left side */
+.left {
+    left: 0;
+    background-color: purple;
+}
+  
+  /* Control the right side */
+.right {
+    right: 0;
+    background-color: orange;
+}
+  
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+/* Style the image inside the centered container, if needed */
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+
 @media only screen and (max-width: 1000px) {
     nav {
         width: 100%;
@@ -131,7 +197,7 @@ nav {
     .logo {
         color: white;
         font-size: 22px;
-        padding: 10px 12px;
+        padding: 15px 12px;
     }
     
     .brand_name {
