@@ -7,24 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 </head>
     <body>
         <div class=container>
             <div class="split left">
-                <div class="centered">
-                    <!-- <img src="img_avatar2.png" alt="Avatar woman"> -->
-                    <h2>Jane Flex</h2>
-                    <p>Some text.</p>
+                <div class="out_gal">
+                    <img class="img1"src="{{ url_for('static', filename='brunette.jpeg')}}">
+                    <img class="img2"src="{{ url_for('static', filename='engaged.jpeg')}}">
+                    <img class="img3"src="{{ url_for('static', filename='guy.jpeg')}}">
+                    <!-- <img class="wfimg"src="{{ url_for('static', filename='sample.png')}}"> -->
+                    <img class="img4"src="{{ url_for('static', filename='smile.jpeg')}}">
+                    <img class="img5"src="{{ url_for('static', filename='snowcouple.jpeg')}}">
+                    <img class="img6"src="{{ url_for('static', filename='wong.jpeg')}}">
                 </div>
             </div>
             
             <div class="split right">
-                <div class="centered">
-                    <!-- <img src="img_avatar.png" alt="Avatar man"> -->
-                    <h2>John Doe</h2>
-                    <p>Some text here too.</p>
-                </div>
             </div>
             {% include 'includes/_navbar.html' %}
             {% block body %}{% endblock %}
