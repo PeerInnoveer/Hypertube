@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
     <body>
-        <div class=container>
+        <div>
             <div class="split left">
-                <div class="out_gal">
+                <div id="leftSection" class="out_gal">
+                    <img class="img5"src="{{ url_for('static', filename='snowcouple.jpeg')}}">
                     <img class="img1"src="{{ url_for('static', filename='brunette.jpeg')}}">
                     <img class="img2"src="{{ url_for('static', filename='engaged.jpeg')}}">
                     <img class="img3"src="{{ url_for('static', filename='guy.jpeg')}}">
-                    <!-- <img class="wfimg"src="{{ url_for('static', filename='sample.png')}}"> -->
                     <img class="img4"src="{{ url_for('static', filename='smile.jpeg')}}">
-                    <img class="img5"src="{{ url_for('static', filename='snowcouple.jpeg')}}">
                     <img class="img6"src="{{ url_for('static', filename='wong.jpeg')}}">
                 </div>
             </div>
@@ -27,5 +26,18 @@
             {% include 'includes/_navbar.html' %}
             {% block body %}{% endblock %}
         </div>
+        <!-- <script type="text/javascript">
+            $(document).ready(function() {
+                $('#leftSection').leftSection({
+                    navigation: true,
+                    continuousVertical: true,
+                    afterRender: function() {
+                        setInterval(function(){
+                            $.fn.leftSection.moveSectionDown();
+                        }, 1500);
+                    }
+                });
+            });
+        </script> -->
     </body>
 </html>
