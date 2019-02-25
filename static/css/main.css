@@ -123,7 +123,7 @@ nav {
 }
 
  body {
-    background-image: linear-gradient(75deg, orange, purple);
+    background-image: linear-gradient(75deg, purple, red);
  }
 
 .out_gal {
@@ -161,17 +161,107 @@ nav {
 
 /* Control the left side */
 .left {
+    z-index: 1;
     left: 0;
 }
 
 /* Control the right side */
-.right {
+/* .right {
+    z-index: 1;
     right: 0;
     background-image: linear-gradient(purple, red);
-}
+} */
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.loginbox {
+    position: absolute;
+    z-index: 2;
+    width: 320px;
+    height: 420px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 10px;
+}
+
+.avatarbox {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 5px;
+    background: whitesmoke;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.avatarbox img {
+    width: 100%;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+    padding: 0 0 20px;
+    font-size: 22px;
+    font-family: arial;
+}
+.formbox p {
+    font-family: arial;
+}
+.formbox {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.formbox input
+{
+  width: 100%;
+  margin-bottom: 20px;  
+}
+.formbox input[type="text"], .formbox input[type="password"]
+{
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.formbox input[type="submit"]
+{
+    border: 0;
+    outline: 0;
+    background: linear-gradient(75deg, purple, red);
+    height: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+.formbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: linear-gradient(75deg, rgb(126, 65, 126), rgb(231, 81, 81));
+}
+.formbox a {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 20px;
+    color: darkgrey;
+    font-family: arial;
+}
+.formbox a:hover {
+    color: #f00
 }
 
 @media only screen and (max-width: 1000px) {

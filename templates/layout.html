@@ -12,16 +12,31 @@
         <div>
             <div class="split left">
                 <div id="leftSection" class="out_gal">
-                    <img class="img5"src="{{ url_for('static', filename='snowcouple.jpeg')}}">
-                    <img class="img1"src="{{ url_for('static', filename='brunette.jpeg')}}">
-                    <img class="img2"src="{{ url_for('static', filename='engaged.jpeg')}}">
-                    <img class="img3"src="{{ url_for('static', filename='guy.jpeg')}}">
-                    <img class="img4"src="{{ url_for('static', filename='smile.jpeg')}}">
-                    <img class="img6"src="{{ url_for('static', filename='wong.jpeg')}}">
+                    <img src="{{ url_for('static', filename='snowcouple.jpeg')}}">
+                    <img src="{{ url_for('static', filename='brunette.jpeg')}}">
+                    <img src="{{ url_for('static', filename='engaged.jpeg')}}">
+                    <img src="{{ url_for('static', filename='guy.jpeg')}}">
+                    <img src="{{ url_for('static', filename='smile.jpeg')}}">
+                    <img src="{{ url_for('static', filename='wong.jpeg')}}">
                 </div>
             </div>
-            
-            <div class="split right">
+            <div class="loginbox">
+                <div class="avatarbox">
+                    <img class="avatar" src="{{ url_for('static', filename='avatar.png')}}">
+                </div>
+                <h1>Login Form</h1>
+                <div class="formbox">
+                    <form>
+                        <p>Username</p>
+                        <input type="text" name="" placeholder="Enter Username">
+                        <p>Password</p>
+                        <input type="password" name="" placeholder="Enter Password">
+                        <input type="submit" name="" value="Login">
+                        <a href="">Forgot Password?</a>
+                        <br>
+                        <a href="">Already have an Account?</a>
+                    </form>
+                </div>
             </div>
             {% include 'includes/_navbar.html' %}
             {% block body %}{% endblock %}
