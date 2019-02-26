@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
     <body>
         <div>
             <div class="split left">
-                <div id="leftSection" class="out_gal">
+                <div id="outgal">
                     <img src="{{ url_for('static', filename='snowcouple.jpeg')}}">
                     <img src="{{ url_for('static', filename='brunette.jpeg')}}">
                     <img src="{{ url_for('static', filename='engaged.jpeg')}}">
@@ -20,39 +21,57 @@
                     <img src="{{ url_for('static', filename='wong.jpeg')}}">
                 </div>
             </div>
-            <div class="loginbox">
-                <div class="avatarbox">
-                    <img class="avatar" src="{{ url_for('static', filename='avatar.png')}}">
+                <div id="loginbox">
+                    <div class="avatarbox">
+                        <img class="avatar" src="{{ url_for('static', filename='avatar.png')}}">
+                    </div>
+                        <h1>Login Form</h1>
+                    <div class="formbox">
+                        <form>
+                            <p>Username</p>
+                            <input type="text" name="" placeholder="Enter Username">
+                            <p>Password</p>
+                            <input type="password" name="" placeholder="Enter Password">
+                            <input type="submit" name="" value="Login">
+                            <a href="#">Forgot Password?</a>
+                            <br>
+                            <a onclick="loginRegSwitch()" href="#">Don't have an Account?</a>
+                        </form>
+                    </div>
                 </div>
-                <h1>Login Form</h1>
-                <div class="formbox">
-                    <form>
-                        <p>Username</p>
-                        <input type="text" name="" placeholder="Enter Username">
-                        <p>Password</p>
-                        <input type="password" name="" placeholder="Enter Password">
-                        <input type="submit" name="" value="Login">
-                        <a href="#">Forgot Password?</a>
-                        <br>
-                        <a href="#">Already have an Account?</a>
-                    </form>
-                </div>
-            </div>
+               <div id="regbox">
+                        <div class="avatarbox2">
+                            <img class="avatar" src="{{ url_for('static', filename='avatar.png')}}">
+                        </div>
+                        <h1>Registration Form</h1>
+                            <div class="formbox2">
+                                <form>
+                                    <p>First Name</p>
+                                    <input type="text" name="" placeholder="Enter First Name">
+                                    <p>Last Name</p>
+                                    <input type="text" name="" placeholder="Enter Last Name">
+                                    <p>Email</p>
+                                    <input type="email" name="" placeholder="Enter Email">
+                                    <p>Password</p>
+                                    <input type="password" name="" placeholder="Enter Password">
+                                    <p>Confirm Password</p>
+                                    <input type="password" name="" placeholder="Confirm Password">
+                                    <a onclick="backtologin()" href="#">Back to login.</a>
+                                </form>
+                            </div>
+                    </div>
             {% include 'includes/_navbar.html' %}
             {% block body %}{% endblock %}
         </div>
-        <!-- <script type="text/javascript">
-            $(document).ready(function() {
-                $('#leftSection').leftSection({
-                    navigation: true,
-                    continuousVertical: true,
-                    afterRender: function() {
-                        setInterval(function(){
-                            $.fn.leftSection.moveSectionDown();
-                        }, 1500);
-                    }
-                });
-            });
-        </script> -->
+        <script>
+             function loginRegSwitch() {
+                document.getElementById("loginbox").style.display = "none";
+                document.getElementById("regbox").style.display = "block";
+             }
+             function backtologin() {
+                document.getElementById("loginbox").style.display = "block";
+                document.getElementById("regbox").style.display = "none";
+             }
+        </script>
     </body>
 </html>
