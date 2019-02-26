@@ -129,12 +129,13 @@ nav {
 }
 
  body {
-    background-image: linear-gradient(purple, red);
+    /* position: fixed; */
+    background: linear-gradient(purple, red);
  }
 
-#outgal {
+/* #outgal {
     position: absolute;
-}
+} */
 
 /* @media (min-width: 768px) {
     .container {
