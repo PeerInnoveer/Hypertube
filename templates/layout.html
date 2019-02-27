@@ -40,33 +40,37 @@
                     </div>
                 </div>
                <div id="regbox">
-                        <div class="avatarbox2">
-                            <img class="avatar" src="{{ url_for('static', filename='avatar.png')}}">
-                        </div>
-                        <h1>Registration Form</h1>
-                            <div class="formbox2">
-                                <form>
-                                    <p>First Name</p>
-                                    <input type="text" name="" placeholder="Enter First Name">
-                                    <p>Last Name</p>
-                                    <input type="text" name="" placeholder="Enter Last Name">
-                                    <p>Email</p>
-                                    <input type="email" name="" placeholder="Enter Email">
-                                    <p>Password</p>
-                                    <input type="password" name="" placeholder="Enter Password">
-                                    <p>Confirm Password</p>
-                                    <input type="password" name="" placeholder="Confirm Password">
-                                    <a onclick="backtologin()" href="#">Back to login.</a>
-                                </form>
-                            </div>
+                    <div class="avatarbox2">
+                        <img class="avatar" src="{{ url_for('static', filename='avatar.png')}}">
                     </div>
+                        <h1>Sign up to and meet new people for either friendship or love.</h1>
+                        <div class="formbox2">
+                            <form>
+                                <p>First Name</p>
+                                <input type="text" name="" placeholder="Enter First Name">
+                                <p>Last Name</p>
+                                <input type="text" name="" placeholder="Enter Last Name">
+                                <p>Email</p>
+                                <input type="email" name="" placeholder="Enter Email">
+                                <p>Password</p>
+                                <input type="password" name="" placeholder="Enter Password">
+                                <p>Confirm Password</p>
+                                <input type="password" name="" placeholder="Confirm Password">
+                                <p class="Terms">By signing up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>.</p>
+                            </form>
+                        </div>
+                        <div class="HaveAccBox">
+                            <p class="dyhaA">Do you have an account?</p><a class="hAatag" onclick="backtologin()" href="#">Log in</a>
+                        </div>
+                </div>
+                
             {% include 'includes/_navbar.html' %}
             {% block body %}{% endblock %}
         </div>
         <script>
              function loginRegSwitch() {
-                document.getElementById("loginbox").style.display = "none";
                 document.getElementById("regbox").style.display = "block";
+                document.getElementById("loginbox").style.display = "none";
              }
              function backtologin() {
                 document.getElementById("loginbox").style.display = "block";
