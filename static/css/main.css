@@ -121,7 +121,7 @@ nav {
     font-family: 'Carter One', monospace;
 }
 
-.nav-items {
+.navItems {
     width: 50%;
     float: right;
     height: 60px;
@@ -129,13 +129,15 @@ nav {
 }
 
 .notify {
-    margin-left: 428px;
-    padding: 12px;
+    position: absolute;
+    top: 15px;
+    right: 110px;
     font-size: 30px;
 }
 .dropD {
-    float: right;
-    padding: 10px 25px;
+    position: absolute;
+    top: 13px;
+    right: 40px;
     font-size: 30px;
 }
 
